@@ -9,7 +9,7 @@ function sortIt(arr) {
 
 module.exports = sortIt;
 
-console.log(sortIt([4, 1, 3])) // [1, 3, 4]
+// console.log(sortIt([4, 1, 3])) // [1, 3, 4]
 
 /*
 console.log(sortIt([[4], [1], [3]])) // [[1], [3], [4]]
