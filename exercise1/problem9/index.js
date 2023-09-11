@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function isDisarium(n) {
   const N = n;
   const len = n.toString().length;
@@ -26,3 +27,10 @@ console.log(isDisarium(8)) // true
 
 console.log(isDisarium(466)) // false
 */
+=======
+function isDisarium() {
+  // Your code
+}
+
+module.exports = isDisarium;
+>>>>>>> 1a7b2e1d9605b833a4fe7ae5c830b7ffd4e05df6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function removeABC(string) {
   const regex = /[a-c]/g;
   if (!string.match(regex))
@@ -15,3 +16,10 @@ console.log(removeABC("hello world!")) // null
 
 console.log(removeABC("")) // null
 */
+=======
+function removeABC() {
+  // Your code
+}
+
+module.exports = removeABC;
+>>>>>>> 1a7b2e1d9605b833a4fe7ae5c830b7ffd4e05df6

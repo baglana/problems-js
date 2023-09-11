@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function insertWhitespace(string) {
   const upperCaseRegex = /[A-Z]/;
   const lowerCaseRegex = /[a-z]/;
@@ -21,3 +22,10 @@ console.log(insertWhitespace("MarvinTalksTooMuch")) // "Marvin Talks Too Much"
 
 console.log(insertWhitespace("TheGreatestUpsetInHistory")) // "The Greatest Upset In History"
 */
+=======
+function insertWhitespace() {
+  // Your code
+}
+
+module.exports = insertWhitespace;
+>>>>>>> 1a7b2e1d9605b833a4fe7ae5c830b7ffd4e05df6

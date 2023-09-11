@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function makeTitleCase(string) {
   const tokens = string.split(' ');
   for (let i in tokens) {
@@ -18,3 +19,10 @@ console.log(makeTitleCase("I Like Pizza")) // "I Like Pizza"
 
 console.log(makeTitleCase("PIZZA PIZZA PIZZA")) // "PIZZA PIZZA PIZZA"
 */
+=======
+function makeTitleCase() {
+  // Your code
+}
+
+module.exports = makeTitleCase;
+>>>>>>> 1a7b2e1d9605b833a4fe7ae5c830b7ffd4e05df6
