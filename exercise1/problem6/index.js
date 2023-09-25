@@ -1,11 +1,10 @@
 function insertWhitespace(string) {
-  let chars = string.split('');
+  const chars = string.split('');
   for (let i = 0; i < chars.length - 1; i++) {
     if (checkPattern(chars[i], chars[i + 1])) {
       chars.splice(i + 1, 0, ' ');
     }
   }
-
   return chars.join('');
 }
 
