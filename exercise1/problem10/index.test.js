@@ -6,6 +6,7 @@ describe("exercise1 - problem10", () => {
     { text: "hello", expected: "ifmmp" },
     { text: "lol", expected: "mpm" },
     { text: "bye", expected: "czf" },
+    { text: "zZ", expected: "aA" },
   ])(".move($text)", ({ text, expected }) => {
     expect(move(text)).toBe(expected);
   });
