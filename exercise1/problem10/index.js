@@ -1,13 +1,36 @@
 function move(str) {
-  let arr = str.split('');
   for (let i = 0; i < str.length; i++) {
-    moveChar(i, str, arr);
+    const char = str.charAt(i);
+    str = str.replace(char, getNextChar(char));
   }
-  return arr.join('');
+  return str;
 }
 
+function getNextChar(char) {
+  const edgeCases = {
+    z: 'a',
+    Z: 'A'
+  }
+  if (char in edgeCases) {
+    return edgeCases[char];
+  }
+  let charCode = char.charCodeAt(0);
+  charCode++;
+  return String.fromCharCode(charCode);
+}
+
+/*
+function move(str) {
+  const chars = str.split('');
+  for (let i = 0; i < str.length; i++) {
+    moveChar(i, str, chars);
+  }
+  return chars.join('');
+}
+*/
+
 function moveChar(i, str, arr) {
-  const charMap = {
+  const charDict = {
     z: 'a',
     Z: 'A'
   }
@@ -16,7 +39,7 @@ function moveChar(i, str, arr) {
   switch (oldChar) {
     case 'z':
     case 'Z':
-      newChar = charMap[oldChar];
+      newChar = charDict[oldChar];
       break;
     default:
       let charCode = str.charCodeAt(i);
@@ -34,11 +57,3 @@ function moveChar(i, str, arr) {
 }
 
 module.exports = move;
-
-console.log(move("zZ")); // "aA"
-
-console.log(move("hello")) // "ifmmp"
-
-console.log(move("bye")) // "czf"
-
-console.log(move("welcome")) // "xfmdpnf"
