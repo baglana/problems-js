@@ -3,7 +3,7 @@ function isDisarium(n) {
   const len = n.toString().length;
   let sum = 0;
   for (let pos = len; n > 0; pos--) {
-    sum += Math.pow(n % 10, pos);
+    sum += (n % 10) ** pos;
     n = Math.floor(n / 10);
   }
   return sum === num;
