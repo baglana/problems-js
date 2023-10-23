@@ -19,4 +19,4 @@ function getNextChar(char) {
   return String.fromCharCode(charCode);
 }
 
-module.exports = move;
+export default move;

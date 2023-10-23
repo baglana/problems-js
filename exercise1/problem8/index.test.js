@@ -1,5 +1,5 @@
-const { describe, expect, test } = require("@jest/globals");
-const longestTime = require("./index");
+import { describe, expect, test }
+import longestTime from "./index";
 
 describe("exercise1 - problem8", () => {
   test.each([

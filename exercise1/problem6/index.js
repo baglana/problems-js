@@ -15,4 +15,4 @@ function checkPattern(char1, char2) {
       && upperCaseRegex.test(char2);
 }
 
-module.exports = insertWhitespace;
+export default insertWhitespace;

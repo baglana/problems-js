@@ -2,8 +2,6 @@ function getBudgets(arr) {
   return arr.reduce((acc, obj) => acc + obj.budget, 0);
 }
 
-module.exports = getBudgets;
-
 /*
 console.log(
   getBudgets([
@@ -21,3 +19,5 @@ console.log(
   ])
 ); // 62600
 */
+
+export default getBudgets;

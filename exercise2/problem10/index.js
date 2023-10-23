@@ -7,4 +7,4 @@ function getStudentsWithNamesAndTopNotes(students) {
   return studentsWithNamesAndTopNotes;
 }
 
-module.exports = getStudentsWithNamesAndTopNotes;
+export default getStudentsWithNamesAndTopNotes;

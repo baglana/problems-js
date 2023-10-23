@@ -6,4 +6,4 @@ function removeABC(string) {
   return string.replaceAll(regex, '');
 }
 
-module.exports = removeABC;
+export default removeABC;

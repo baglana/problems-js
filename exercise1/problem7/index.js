@@ -29,4 +29,4 @@ function isPrimitive(val) {
 }
 */
 
-module.exports = isPrimitive;
+export default isPrimitive;

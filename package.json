@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "vitest": "vitest",
+    "test": "vitest run --dir"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@jest/globals": "^29.5.0",
-    "jest": "^29.5.0",
     "prettier": "^2.8.8",
-    "ts-jest": "^29.1.0"
+    "vitest": "^0.34.6"
   }
 }

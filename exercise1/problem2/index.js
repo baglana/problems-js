@@ -5,4 +5,4 @@ function intWithinBounds(n, lower, upper) {
   return lower < n && n < upper;
 }
 
-module.exports = intWithinBounds;
+export default intWithinBounds;
