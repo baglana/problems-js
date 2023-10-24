@@ -12,4 +12,4 @@ function numOfDigits(int) {
   return Math.abs(int).toString().length;
 }
 
-module.exports = numOfDigits;
+export default numOfDigits;
