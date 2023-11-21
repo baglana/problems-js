@@ -21,7 +21,7 @@
 
 ### SSR Disadvantages
 
-* The application is divided into server and client. That is, we essentially have 2 applications. 
+* the application is divided into server and client. That is, we essentially have 2 applications. 
   * This separation should be minimal, otherwise supporting such an application will be difficult.
 * can be costly and resource-intensive, as the server takes on the full burden of rendering content for users and bots.
 * while rendering static HTML server-side is efficient,
