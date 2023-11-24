@@ -1,49 +1,51 @@
 import "./index.css";
-import {controller, signal} from "./utils/abortSignal.ts";
+import { controller, signal } from "./utils/abortSignal.ts";
 import App from "./app.ts";
 import SlytherinUser from "./model/SlytherinUser.ts";
 import GryffindorUser from "./model/GryffindorUser.ts";
 import RavenclawUser from "./model/RavenclawUser.ts";
 import HufflepuffUser from "./model/HufflepuffUser.ts";
+import Team3Bot from "./model/Team3Bot.ts";
 
-window.addEventListener("unload", unloadHandler, {once: true});
-window.addEventListener("load", loadHandler, {once: true});
+window.addEventListener("unload", unloadHandler, { once: true });
+window.addEventListener("load", loadHandler, { once: true });
 
 function unloadHandler() {
-    // NOTE: no need for removeEventListener;
-    controller.abort();
+  // NOTE: no need for removeEventListener;
+  controller.abort();
 }
 
 async function loadHandler() {
-    const app = getApp();
+  const app = getApp();
 
-    if (!app) {
-        return;
-    }
+  if (!app) {
+    return;
+  }
 
-    window.addEventListener("pushstate", app.render, {signal});
-    window.addEventListener("popstate", app.render, {signal});
+  window.addEventListener("pushstate", app.render, { signal });
+  window.addEventListener("popstate", app.render, { signal });
 
-    await app.render();
+  await app.render();
 }
 
 function getApp() {
-    const appEl = document.getElementById("app");
+  const appEl = document.getElementById("app");
 
-    if (!appEl) {
-        return null;
-    }
+  if (!appEl) {
+    return null;
+  }
 
-    const players = getPlayers();
+  const players = getPlayers();
 
-    return new App(appEl, players);
+  return new App(appEl, players);
 }
 
 function getPlayers() {
-    const gryffindorUser = new GryffindorUser();
-    const slytherinUser = new SlytherinUser();
-    const ravenclawUser = new RavenclawUser();
-    const hufflepuffUser = new HufflepuffUser();
+  const gryffindorUser = new GryffindorUser();
+  // const slytherinUser = new SlytherinUser();
+  // const ravenclawUser = new RavenclawUser();
+  // const hufflepuffUser = new HufflepuffUser();
+  const team3Bot = new Team3Bot();
 
-    return [gryffindorUser, slytherinUser, ravenclawUser, hufflepuffUser];
+  return [gryffindorUser, team3Bot];
 }
