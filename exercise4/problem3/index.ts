@@ -6,31 +6,31 @@ class Shape {
 
 // Update it as much as you want, just don't change the name
 export class Circle extends Shape {
-    radius: number;
+    #radius: number;
 
     constructor(radius: number) {
         super();
-        this.radius = radius;
+        this.#radius = radius;
     }
 
     getArea() {
-        return Math.PI * this.radius ** 2;
+        return Math.PI * this.#radius ** 2;
     }
 }
 
 // Update it as much as you want, just don't change the name
 export class Rectangle extends Shape {
-    length: number;
-    width: number;
+    #length: number;
+    #width: number;
 
     constructor(length: number, width: number) {
         super();
-        this.length = length;
-        this.width = width;
+        this.#length = length;
+        this.#width = width;
     }
 
     getArea() {
-        return this.length * this.width;
+        return this.#length * this.#width;
     }
 }
 
